@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "tokenizer": "cl100k_base (gpt-tokenizer)",
+    "githubTools": 150,
+    "crmTools": 2,
+    "avgDefTokensGithub": 220,
+    "since": "2026-08-24"
+  },
+  "scaling": [
+    {
+      "tools": 10,
+      "direct": 2254,
+      "codeFull": 2156,
+      "codeLazy": 252
+    },
+    {
+      "tools": 50,
+      "direct": 9961,
+      "codeFull": 8408,
+      "codeLazy": 477
+    },
+    {
+      "tools": 152,
+      "direct": 33119,
+      "codeFull": 28264,
+      "codeLazy": 1049
+    },
+    {
+      "tools": 500,
+      "direct": 109585,
+      "codeFull": 93299,
+      "codeLazy": 3693
+    },
+    {
+      "tools": 1000,
+      "direct": 219338,
+      "codeFull": 187268,
+      "codeLazy": 7493
+    },
+    {
+      "tools": 2500,
+      "direct": 552098,
+      "codeFull": 470918,
+      "codeLazy": 18893
+    }
+  ],
+  "workflow": [
+    {
+      "tools": 152,
+      "direct": {
+        "calls": 3,
+        "input": 103632,
+        "output": 73,
+        "intermediateThroughModel": 3725
+      },
+      "codeFull": {
+        "calls": 2,
+        "input": 56732,
+        "output": 160,
+        "intermediateThroughModel": 19
+      },
+      "codeLazy": {
+        "calls": 4,
+        "input": 3436,
+        "output": 191,
+        "intermediateThroughModel": 19
+      },
+      "parts": {
+        "system": 10,
+        "user": 18,
+        "toolDefs": 33119,
+        "call1": 16,
+        "result1": 408,
+        "call2": 26,
+        "result2": 3317,
+        "runCodeTool": 76,
+        "lsCall": 14,
+        "listing": 850,
+        "readCall": 17,
+        "neededDefs": 123,
+        "script": 129,
+        "printed": 19,
+        "answer": 31
+      }
+    },
+    {
+      "tools": 1000,
+      "direct": {
+        "calls": 3,
+        "input": 662289,
+        "output": 73,
+        "intermediateThroughModel": 3725
+      },
+      "codeFull": {
+        "calls": 2,
+        "input": 374740,
+        "output": 160,
+        "intermediateThroughModel": 19
+      },
+      "codeLazy": {
+        "calls": 4,
+        "input": 22768,
+        "output": 191,
+        "intermediateThroughModel": 19
+      },
+      "parts": {
+        "system": 10,
+        "user": 18,
+        "toolDefs": 219338,
+        "call1": 16,
+        "result1": 408,
+        "call2": 26,
+        "result2": 3317,
+        "runCodeTool": 76,
+        "lsCall": 14,
+        "listing": 7294,
+        "readCall": 17,
+        "neededDefs": 123,
+        "script": 129,
+        "printed": 19,
+        "answer": 31
+      }
+    }
+  ],
+  "sizes": {
+    "customerSearchResult": 408,
+    "orderListResult": 3317,
+    "printedByScript": 19,
+    "script": 129,
+    "customersReturned": 4,
+    "ordersReturned": 30
+  },
+  "correctness": {
+    "truth": 15146.2,
+    "scriptTotal": 15146.2,
+    "match": true
+  },
+  "printed": "{\"customer\":\"cus_1000\",\"orders\":26,\"total\":\"15146.20\"}",
+  "script": "async () => {\n  const [c] = (await crm.crm_search_customers({ query: \"Priya Shah\" }))\n    .filter(x => x.name === \"Priya Shah\");\n  const orders = await crm.crm_list_orders({ customer_id: c.id, since: \"2026-08-24\" });\n  const kept = orders.filter(o => o.status !== \"refunded\");\n  const total = kept.reduce((s, o) => s + o.subtotal, 0);\n  console.log(JSON.stringify({ customer: c.id, orders: kept.length, total: total.toFixed(2) }));\n}",
+  "sampleTS": "/** Search issues using natural-language semantic matching. Best for conceptual or paraphrased queries (e.g. \"login fails after password reset\"). Already scoped to is:issue. */\nexport function search_issues(input: {\n  /** Subset of fields to return for each issue result. If omitted, all fields are returned. Use this to reduce response size when you only need specific fields; omitting 'body', 'reactions', and 'labels' in particular drops the largest per-result data. */\n  fields?: Array<\"number\" | \"title\" | \"body\" | \"state\" | \"state_reason\" | \"draft\" | \"locked\" | \"html_url\" | \"user\" | \"author_as"
+}

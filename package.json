@@ -1,0 +1,7 @@
+{
+  "name": "mcp-code-mode-token-experiment",
+  "private": true,
+  "description": "Token accounting: direct MCP tool calling vs Code Mode, on the GitHub MCP server's real tool schemas",
+  "scripts": { "start": "node experiment.js ../github-mcp-server/pkg/github/__toolsnaps__ > results.json" },
+  "dependencies": { "gpt-tokenizer": "^2.9.0" }
+}
