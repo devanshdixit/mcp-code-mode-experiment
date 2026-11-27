@@ -1,0 +1,2181 @@
+{
+  "meta": {
+    "model": "gpt-oss-120b",
+    "apiBaseUrl": "https://llm-api.arc.vt.edu/api/v1",
+    "startedAt": "2026-11-27T02:51:59.373Z",
+    "finishedAt": "2026-11-27T03:01:59.908Z",
+    "runsPerSetup": 10,
+    "githubTools": 150,
+    "crmTools": 2,
+    "totalDirectTools": 152,
+    "temperature": 0,
+    "since": "2026-08-24",
+    "fixtureReferenceDate": "2026-11-22",
+    "task": "How much did Priya Shah spend in the last 90 days? Exclude refunded orders.",
+    "apiKeyRecorded": false
+  },
+  "groundTruth": {
+    "value": 15146.2,
+    "formatted": "$15,146.20"
+  },
+  "setups": {
+    "direct": {
+      "description": "All 152 tools supplied as OpenAI function tools."
+    },
+    "codeMode": {
+      "description": "One run_code function tool, plus the 152-file listing and two relevant TypeScript definitions in context."
+    }
+  },
+  "runs": {
+    "direct": [
+      {
+        "run": 1,
+        "setup": "direct",
+        "inputTokens": 83124,
+        "outputTokens": 2472,
+        "totalTokens": 85596,
+        "modelCalls": 3,
+        "apiRetries": 0,
+        "toolCalls": 2,
+        "scriptExecutions": 0,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah’s total spend in the last 90 days (from 2026‑08‑24 to 2026‑11‑22), **excluding any refunded orders**, is:\n\n**$15,146.20**.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26261,
+              "outputTokens": 267,
+              "totalTokens": 26528,
+              "raw": {
+                "prompt_tokens": 26261,
+                "total_tokens": 26528,
+                "completion_tokens": 267,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26256,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_search_customers"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26719,
+              "outputTokens": 198,
+              "totalTokens": 26917,
+              "raw": {
+                "prompt_tokens": 26719,
+                "total_tokens": 26917,
+                "completion_tokens": 198,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26704,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_list_orders"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 30144,
+              "outputTokens": 2007,
+              "totalTokens": 32151,
+              "raw": {
+                "prompt_tokens": 30144,
+                "total_tokens": 32151,
+                "completion_tokens": 2007,
+                "prompt_tokens_details": {
+                  "cached_tokens": 30128,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 2,
+        "setup": "direct",
+        "inputTokens": 83124,
+        "outputTokens": 1579,
+        "totalTokens": 84703,
+        "modelCalls": 3,
+        "apiRetries": 0,
+        "toolCalls": 2,
+        "scriptExecutions": 0,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah spent **$15,146.20** in the last 90 days (excluding any refunded orders).",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26261,
+              "outputTokens": 263,
+              "totalTokens": 26524,
+              "raw": {
+                "prompt_tokens": 26261,
+                "total_tokens": 26524,
+                "completion_tokens": 263,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26256,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_search_customers"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26719,
+              "outputTokens": 194,
+              "totalTokens": 26913,
+              "raw": {
+                "prompt_tokens": 26719,
+                "total_tokens": 26913,
+                "completion_tokens": 194,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26704,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_list_orders"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 30144,
+              "outputTokens": 1122,
+              "totalTokens": 31266,
+              "raw": {
+                "prompt_tokens": 30144,
+                "total_tokens": 31266,
+                "completion_tokens": 1122,
+                "prompt_tokens_details": {
+                  "cached_tokens": 30128,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 3,
+        "setup": "direct",
+        "inputTokens": 83124,
+        "outputTokens": 2411,
+        "totalTokens": 85535,
+        "modelCalls": 3,
+        "apiRetries": 0,
+        "toolCalls": 2,
+        "scriptExecutions": 0,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah’s total spend on non‑refunded orders in the last 90 days (from 2026‑08‑24 to 2026‑11‑22) is **$15,146.20**.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26261,
+              "outputTokens": 272,
+              "totalTokens": 26533,
+              "raw": {
+                "prompt_tokens": 26261,
+                "total_tokens": 26533,
+                "completion_tokens": 272,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26256,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_search_customers"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26719,
+              "outputTokens": 104,
+              "totalTokens": 26823,
+              "raw": {
+                "prompt_tokens": 26719,
+                "total_tokens": 26823,
+                "completion_tokens": 104,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26704,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_list_orders"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 30144,
+              "outputTokens": 2035,
+              "totalTokens": 32179,
+              "raw": {
+                "prompt_tokens": 30144,
+                "total_tokens": 32179,
+                "completion_tokens": 2035,
+                "prompt_tokens_details": {
+                  "cached_tokens": 30128,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 4,
+        "setup": "direct",
+        "inputTokens": 83124,
+        "outputTokens": 1851,
+        "totalTokens": 84975,
+        "modelCalls": 3,
+        "apiRetries": 0,
+        "toolCalls": 2,
+        "scriptExecutions": 0,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah’s total spend over the last 90 days (from 2026‑08‑24 to 2026‑11‑22), **excluding any refunded orders**, is **$15,146.20**.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26261,
+              "outputTokens": 267,
+              "totalTokens": 26528,
+              "raw": {
+                "prompt_tokens": 26261,
+                "total_tokens": 26528,
+                "completion_tokens": 267,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26256,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_search_customers"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26719,
+              "outputTokens": 198,
+              "totalTokens": 26917,
+              "raw": {
+                "prompt_tokens": 26719,
+                "total_tokens": 26917,
+                "completion_tokens": 198,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26704,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_list_orders"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 30144,
+              "outputTokens": 1386,
+              "totalTokens": 31530,
+              "raw": {
+                "prompt_tokens": 30144,
+                "total_tokens": 31530,
+                "completion_tokens": 1386,
+                "prompt_tokens_details": {
+                  "cached_tokens": 30128,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 5,
+        "setup": "direct",
+        "inputTokens": 83124,
+        "outputTokens": 1757,
+        "totalTokens": 84881,
+        "modelCalls": 3,
+        "apiRetries": 0,
+        "toolCalls": 2,
+        "scriptExecutions": 0,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah’s total spend over the last 90 days (excluding any refunded orders) is **$15,146.20 USD**.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26261,
+              "outputTokens": 267,
+              "totalTokens": 26528,
+              "raw": {
+                "prompt_tokens": 26261,
+                "total_tokens": 26528,
+                "completion_tokens": 267,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26256,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_search_customers"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26719,
+              "outputTokens": 198,
+              "totalTokens": 26917,
+              "raw": {
+                "prompt_tokens": 26719,
+                "total_tokens": 26917,
+                "completion_tokens": 198,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26704,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_list_orders"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 30144,
+              "outputTokens": 1292,
+              "totalTokens": 31436,
+              "raw": {
+                "prompt_tokens": 30144,
+                "total_tokens": 31436,
+                "completion_tokens": 1292,
+                "prompt_tokens_details": {
+                  "cached_tokens": 30128,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 6,
+        "setup": "direct",
+        "inputTokens": 83124,
+        "outputTokens": 1885,
+        "totalTokens": 85009,
+        "modelCalls": 3,
+        "apiRetries": 0,
+        "toolCalls": 2,
+        "scriptExecutions": 0,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah’s total spend over the last 90 days (from 2026‑08‑24 to 2026‑11‑22), **excluding any refunded orders**, is **$15,146.20**.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26261,
+              "outputTokens": 266,
+              "totalTokens": 26527,
+              "raw": {
+                "prompt_tokens": 26261,
+                "total_tokens": 26527,
+                "completion_tokens": 266,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26256,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_search_customers"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26719,
+              "outputTokens": 198,
+              "totalTokens": 26917,
+              "raw": {
+                "prompt_tokens": 26719,
+                "total_tokens": 26917,
+                "completion_tokens": 198,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26704,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_list_orders"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 30144,
+              "outputTokens": 1421,
+              "totalTokens": 31565,
+              "raw": {
+                "prompt_tokens": 30144,
+                "total_tokens": 31565,
+                "completion_tokens": 1421,
+                "prompt_tokens_details": {
+                  "cached_tokens": 30128,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 7,
+        "setup": "direct",
+        "inputTokens": 83124,
+        "outputTokens": 1703,
+        "totalTokens": 84827,
+        "modelCalls": 3,
+        "apiRetries": 0,
+        "toolCalls": 2,
+        "scriptExecutions": 0,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah spent **$15,146.20** on orders placed in the last 90 days (from 2026‑08‑24 to 2026‑11‑22), excluding any orders that were refunded.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26261,
+              "outputTokens": 300,
+              "totalTokens": 26561,
+              "raw": {
+                "prompt_tokens": 26261,
+                "total_tokens": 26561,
+                "completion_tokens": 300,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26256,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_search_customers"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26719,
+              "outputTokens": 198,
+              "totalTokens": 26917,
+              "raw": {
+                "prompt_tokens": 26719,
+                "total_tokens": 26917,
+                "completion_tokens": 198,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26704,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_list_orders"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 30144,
+              "outputTokens": 1205,
+              "totalTokens": 31349,
+              "raw": {
+                "prompt_tokens": 30144,
+                "total_tokens": 31349,
+                "completion_tokens": 1205,
+                "prompt_tokens_details": {
+                  "cached_tokens": 30128,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 8,
+        "setup": "direct",
+        "inputTokens": 83124,
+        "outputTokens": 1687,
+        "totalTokens": 84811,
+        "modelCalls": 3,
+        "apiRetries": 0,
+        "toolCalls": 2,
+        "scriptExecutions": 0,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah’s total spend on non‑refunded orders in the last 90 days (from 2026‑08‑24 to 2026‑11‑22) is **$15,146.20**.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26261,
+              "outputTokens": 267,
+              "totalTokens": 26528,
+              "raw": {
+                "prompt_tokens": 26261,
+                "total_tokens": 26528,
+                "completion_tokens": 267,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26256,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_search_customers"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26719,
+              "outputTokens": 191,
+              "totalTokens": 26910,
+              "raw": {
+                "prompt_tokens": 26719,
+                "total_tokens": 26910,
+                "completion_tokens": 191,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26704,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_list_orders"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 30144,
+              "outputTokens": 1229,
+              "totalTokens": 31373,
+              "raw": {
+                "prompt_tokens": 30144,
+                "total_tokens": 31373,
+                "completion_tokens": 1229,
+                "prompt_tokens_details": {
+                  "cached_tokens": 30128,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 9,
+        "setup": "direct",
+        "inputTokens": 83124,
+        "outputTokens": 1894,
+        "totalTokens": 85018,
+        "modelCalls": 3,
+        "apiRetries": 0,
+        "toolCalls": 2,
+        "scriptExecutions": 0,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah’s total spend over the last 90 days (from 2026‑08‑24 to 2026‑11‑22), **excluding any refunded orders**, is **$15,146.20**.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26261,
+              "outputTokens": 279,
+              "totalTokens": 26540,
+              "raw": {
+                "prompt_tokens": 26261,
+                "total_tokens": 26540,
+                "completion_tokens": 279,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26256,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_search_customers"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26719,
+              "outputTokens": 198,
+              "totalTokens": 26917,
+              "raw": {
+                "prompt_tokens": 26719,
+                "total_tokens": 26917,
+                "completion_tokens": 198,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26704,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_list_orders"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 30144,
+              "outputTokens": 1417,
+              "totalTokens": 31561,
+              "raw": {
+                "prompt_tokens": 30144,
+                "total_tokens": 31561,
+                "completion_tokens": 1417,
+                "prompt_tokens_details": {
+                  "cached_tokens": 30128,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 10,
+        "setup": "direct",
+        "inputTokens": 83124,
+        "outputTokens": 1660,
+        "totalTokens": 84784,
+        "modelCalls": 3,
+        "apiRetries": 0,
+        "toolCalls": 2,
+        "scriptExecutions": 0,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah’s total spend on non‑refunded orders in the last 90 days (from 2026‑08‑24 to 2026‑11‑22) is **$15,146.20**.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26261,
+              "outputTokens": 182,
+              "totalTokens": 26443,
+              "raw": {
+                "prompt_tokens": 26261,
+                "total_tokens": 26443,
+                "completion_tokens": 182,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26256,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_search_customers"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 26719,
+              "outputTokens": 198,
+              "totalTokens": 26917,
+              "raw": {
+                "prompt_tokens": 26719,
+                "total_tokens": 26917,
+                "completion_tokens": 198,
+                "prompt_tokens_details": {
+                  "cached_tokens": 26704,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "crm_list_orders"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 30144,
+              "outputTokens": 1280,
+              "totalTokens": 31424,
+              "raw": {
+                "prompt_tokens": 30144,
+                "total_tokens": 31424,
+                "completion_tokens": 1280,
+                "prompt_tokens_details": {
+                  "cached_tokens": 30128,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      }
+    ],
+    "codeMode": [
+      {
+        "run": 1,
+        "setup": "codeMode",
+        "inputTokens": 13984,
+        "outputTokens": 762,
+        "totalTokens": 14746,
+        "modelCalls": 4,
+        "apiRetries": 0,
+        "toolCalls": 3,
+        "scriptExecutions": 3,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah spent **$15,146.20** on non‑refunded orders in the last 90 days.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1321,
+              "outputTokens": 170,
+              "totalTokens": 1491,
+              "raw": {
+                "prompt_tokens": 1321,
+                "total_tokens": 1491,
+                "completion_tokens": 170,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1804,
+              "outputTokens": 212,
+              "totalTokens": 2016,
+              "raw": {
+                "prompt_tokens": 1804,
+                "total_tokens": 2016,
+                "completion_tokens": 212,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 480,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 5316,
+              "outputTokens": 348,
+              "totalTokens": 5664,
+              "raw": {
+                "prompt_tokens": 5316,
+                "total_tokens": 5664,
+                "completion_tokens": 348,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 3520,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 4,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 5543,
+              "outputTokens": 32,
+              "totalTokens": 5575,
+              "raw": {
+                "prompt_tokens": 5543,
+                "total_tokens": 5575,
+                "completion_tokens": 32,
+                "prompt_tokens_details": {
+                  "cached_tokens": 5312,
+                  "created_cache_tokens": 224,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 2,
+        "setup": "codeMode",
+        "inputTokens": 14385,
+        "outputTokens": 1384,
+        "totalTokens": 15769,
+        "modelCalls": 4,
+        "apiRetries": 0,
+        "toolCalls": 3,
+        "scriptExecutions": 3,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah spent **$15,146.20** on orders placed in the last 90 days, after excluding any refunded orders.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1321,
+              "outputTokens": 251,
+              "totalTokens": 1572,
+              "raw": {
+                "prompt_tokens": 1321,
+                "total_tokens": 1572,
+                "completion_tokens": 251,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1793,
+              "outputTokens": 153,
+              "totalTokens": 1946,
+              "raw": {
+                "prompt_tokens": 1793,
+                "total_tokens": 1946,
+                "completion_tokens": 153,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1328,
+                  "created_cache_tokens": 464,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 5246,
+              "outputTokens": 889,
+              "totalTokens": 6135,
+              "raw": {
+                "prompt_tokens": 5246,
+                "total_tokens": 6135,
+                "completion_tokens": 889,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 3440,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 4,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 6025,
+              "outputTokens": 91,
+              "totalTokens": 6116,
+              "raw": {
+                "prompt_tokens": 6025,
+                "total_tokens": 6116,
+                "completion_tokens": 91,
+                "prompt_tokens_details": {
+                  "cached_tokens": 5232,
+                  "created_cache_tokens": 784,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 3,
+        "setup": "codeMode",
+        "inputTokens": 14455,
+        "outputTokens": 1301,
+        "totalTokens": 15756,
+        "modelCalls": 4,
+        "apiRetries": 0,
+        "toolCalls": 3,
+        "scriptExecutions": 3,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah spent **$15,146.20** on orders placed in the last 90 days, excluding any refunded orders.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1321,
+              "outputTokens": 188,
+              "totalTokens": 1509,
+              "raw": {
+                "prompt_tokens": 1321,
+                "total_tokens": 1509,
+                "completion_tokens": 188,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1803,
+              "outputTokens": 199,
+              "totalTokens": 2002,
+              "raw": {
+                "prompt_tokens": 1803,
+                "total_tokens": 2002,
+                "completion_tokens": 199,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 5275,
+              "outputTokens": 882,
+              "totalTokens": 6157,
+              "raw": {
+                "prompt_tokens": 5275,
+                "total_tokens": 6157,
+                "completion_tokens": 882,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 3472,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 4,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 6056,
+              "outputTokens": 32,
+              "totalTokens": 6088,
+              "raw": {
+                "prompt_tokens": 6056,
+                "total_tokens": 6088,
+                "completion_tokens": 32,
+                "prompt_tokens_details": {
+                  "cached_tokens": 5264,
+                  "created_cache_tokens": 784,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 4,
+        "setup": "codeMode",
+        "inputTokens": 13778,
+        "outputTokens": 642,
+        "totalTokens": 14420,
+        "modelCalls": 4,
+        "apiRetries": 0,
+        "toolCalls": 3,
+        "scriptExecutions": 3,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah spent **$15,146.20** on non‑refunded orders in the last 90 days.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1321,
+              "outputTokens": 170,
+              "totalTokens": 1491,
+              "raw": {
+                "prompt_tokens": 1321,
+                "total_tokens": 1491,
+                "completion_tokens": 170,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1804,
+              "outputTokens": 216,
+              "totalTokens": 2020,
+              "raw": {
+                "prompt_tokens": 1804,
+                "total_tokens": 2020,
+                "completion_tokens": 216,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 5255,
+              "outputTokens": 224,
+              "totalTokens": 5479,
+              "raw": {
+                "prompt_tokens": 5255,
+                "total_tokens": 5479,
+                "completion_tokens": 224,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 3456,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 4,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 5398,
+              "outputTokens": 32,
+              "totalTokens": 5430,
+              "raw": {
+                "prompt_tokens": 5398,
+                "total_tokens": 5430,
+                "completion_tokens": 32,
+                "prompt_tokens_details": {
+                  "cached_tokens": 5248,
+                  "created_cache_tokens": 144,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 5,
+        "setup": "codeMode",
+        "inputTokens": 13778,
+        "outputTokens": 677,
+        "totalTokens": 14455,
+        "modelCalls": 4,
+        "apiRetries": 0,
+        "toolCalls": 3,
+        "scriptExecutions": 3,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah spent **$15,146.20** on non‑refunded orders in the last 90 days.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1321,
+              "outputTokens": 170,
+              "totalTokens": 1491,
+              "raw": {
+                "prompt_tokens": 1321,
+                "total_tokens": 1491,
+                "completion_tokens": 170,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1804,
+              "outputTokens": 192,
+              "totalTokens": 1996,
+              "raw": {
+                "prompt_tokens": 1804,
+                "total_tokens": 1996,
+                "completion_tokens": 192,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 5255,
+              "outputTokens": 283,
+              "totalTokens": 5538,
+              "raw": {
+                "prompt_tokens": 5255,
+                "total_tokens": 5538,
+                "completion_tokens": 283,
+                "prompt_tokens_details": {
+                  "cached_tokens": 5248,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 4,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 5398,
+              "outputTokens": 32,
+              "totalTokens": 5430,
+              "raw": {
+                "prompt_tokens": 5398,
+                "total_tokens": 5430,
+                "completion_tokens": 32,
+                "prompt_tokens_details": {
+                  "cached_tokens": 5392,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 6,
+        "setup": "codeMode",
+        "inputTokens": 13909,
+        "outputTokens": 779,
+        "totalTokens": 14688,
+        "modelCalls": 4,
+        "apiRetries": 0,
+        "toolCalls": 3,
+        "scriptExecutions": 3,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah spent **$15,146.20** on orders placed in the last 90 days, excluding any refunded orders.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1321,
+              "outputTokens": 188,
+              "totalTokens": 1509,
+              "raw": {
+                "prompt_tokens": 1321,
+                "total_tokens": 1509,
+                "completion_tokens": 188,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1803,
+              "outputTokens": 237,
+              "totalTokens": 2040,
+              "raw": {
+                "prompt_tokens": 1803,
+                "total_tokens": 2040,
+                "completion_tokens": 237,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 5298,
+              "outputTokens": 320,
+              "totalTokens": 5618,
+              "raw": {
+                "prompt_tokens": 5298,
+                "total_tokens": 5618,
+                "completion_tokens": 320,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1824,
+                  "created_cache_tokens": 3472,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 4,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 5487,
+              "outputTokens": 34,
+              "totalTokens": 5521,
+              "raw": {
+                "prompt_tokens": 5487,
+                "total_tokens": 5521,
+                "completion_tokens": 34,
+                "prompt_tokens_details": {
+                  "cached_tokens": 5296,
+                  "created_cache_tokens": 176,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 7,
+        "setup": "codeMode",
+        "inputTokens": 14064,
+        "outputTokens": 938,
+        "totalTokens": 15002,
+        "modelCalls": 4,
+        "apiRetries": 0,
+        "toolCalls": 3,
+        "scriptExecutions": 3,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah spent **$15,146.20** on orders placed in the last 90 days, excluding any refunded orders.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1321,
+              "outputTokens": 249,
+              "totalTokens": 1570,
+              "raw": {
+                "prompt_tokens": 1321,
+                "total_tokens": 1570,
+                "completion_tokens": 249,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1803,
+              "outputTokens": 320,
+              "totalTokens": 2123,
+              "raw": {
+                "prompt_tokens": 1803,
+                "total_tokens": 2123,
+                "completion_tokens": 320,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 5360,
+              "outputTokens": 337,
+              "totalTokens": 5697,
+              "raw": {
+                "prompt_tokens": 5360,
+                "total_tokens": 5697,
+                "completion_tokens": 337,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1824,
+                  "created_cache_tokens": 3520,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 4,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 5580,
+              "outputTokens": 32,
+              "totalTokens": 5612,
+              "raw": {
+                "prompt_tokens": 5580,
+                "total_tokens": 5612,
+                "completion_tokens": 32,
+                "prompt_tokens_details": {
+                  "cached_tokens": 5344,
+                  "created_cache_tokens": 224,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 8,
+        "setup": "codeMode",
+        "inputTokens": 17593,
+        "outputTokens": 989,
+        "totalTokens": 18582,
+        "modelCalls": 4,
+        "apiRetries": 0,
+        "toolCalls": 3,
+        "scriptExecutions": 3,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah has spent **$15,146.20** on orders placed in the last 90 days, excluding any refunded orders.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1321,
+              "outputTokens": 483,
+              "totalTokens": 1804,
+              "raw": {
+                "prompt_tokens": 1321,
+                "total_tokens": 1804,
+                "completion_tokens": 483,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1804,
+              "outputTokens": 200,
+              "totalTokens": 2004,
+              "raw": {
+                "prompt_tokens": 1804,
+                "total_tokens": 2004,
+                "completion_tokens": 200,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 7160,
+              "outputTokens": 271,
+              "totalTokens": 7431,
+              "raw": {
+                "prompt_tokens": 7160,
+                "total_tokens": 7431,
+                "completion_tokens": 271,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1824,
+                  "created_cache_tokens": 5328,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 4,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 7308,
+              "outputTokens": 35,
+              "totalTokens": 7343,
+              "raw": {
+                "prompt_tokens": 7308,
+                "total_tokens": 7343,
+                "completion_tokens": 35,
+                "prompt_tokens_details": {
+                  "cached_tokens": 7152,
+                  "created_cache_tokens": 144,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 9,
+        "setup": "codeMode",
+        "inputTokens": 17572,
+        "outputTokens": 868,
+        "totalTokens": 18440,
+        "modelCalls": 4,
+        "apiRetries": 0,
+        "toolCalls": 3,
+        "scriptExecutions": 3,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "Priya Shah spent **$15,146.20** on orders placed in the last 90 days, excluding any refunded orders.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1321,
+              "outputTokens": 316,
+              "totalTokens": 1637,
+              "raw": {
+                "prompt_tokens": 1321,
+                "total_tokens": 1637,
+                "completion_tokens": 316,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1804,
+              "outputTokens": 257,
+              "totalTokens": 2061,
+              "raw": {
+                "prompt_tokens": 1804,
+                "total_tokens": 2061,
+                "completion_tokens": 257,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1792,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 7160,
+              "outputTokens": 261,
+              "totalTokens": 7421,
+              "raw": {
+                "prompt_tokens": 7160,
+                "total_tokens": 7421,
+                "completion_tokens": 261,
+                "prompt_tokens_details": {
+                  "cached_tokens": 7152,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 4,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 7287,
+              "outputTokens": 34,
+              "totalTokens": 7321,
+              "raw": {
+                "prompt_tokens": 7287,
+                "total_tokens": 7321,
+                "completion_tokens": 34,
+                "prompt_tokens_details": {
+                  "cached_tokens": 7152,
+                  "created_cache_tokens": 128,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      },
+      {
+        "run": 10,
+        "setup": "codeMode",
+        "inputTokens": 9839,
+        "outputTokens": 1466,
+        "totalTokens": 11305,
+        "modelCalls": 4,
+        "apiRetries": 0,
+        "toolCalls": 3,
+        "scriptExecutions": 3,
+        "failedScripts": 0,
+        "toolErrors": 0,
+        "answer": "**Result (calculated in the sandbox):** $15,146.20  \n\nPriya Shah spent **$15,146.20** on orders placed in the last 90 days (from 2026‑08‑24 to 2026‑11‑22), after excluding any orders that were refunded.",
+        "matchesTruth": true,
+        "completed": true,
+        "error": null,
+        "calls": [
+          {
+            "modelCall": 1,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1321,
+              "outputTokens": 161,
+              "totalTokens": 1482,
+              "raw": {
+                "prompt_tokens": 1321,
+                "total_tokens": 1482,
+                "completion_tokens": 161,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1312,
+                  "created_cache_tokens": 0,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 2,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1382,
+              "outputTokens": 205,
+              "totalTokens": 1587,
+              "raw": {
+                "prompt_tokens": 1382,
+                "total_tokens": 1587,
+                "completion_tokens": 205,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1328,
+                  "created_cache_tokens": 48,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 3,
+            "finishReason": "tool_calls",
+            "usage": {
+              "inputTokens": 1848,
+              "outputTokens": 161,
+              "totalTokens": 2009,
+              "raw": {
+                "prompt_tokens": 1848,
+                "total_tokens": 2009,
+                "completion_tokens": 161,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1376,
+                  "created_cache_tokens": 464,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": [
+              "run_code"
+            ]
+          },
+          {
+            "modelCall": 4,
+            "finishReason": "stop",
+            "usage": {
+              "inputTokens": 5288,
+              "outputTokens": 939,
+              "totalTokens": 6227,
+              "raw": {
+                "prompt_tokens": 5288,
+                "total_tokens": 6227,
+                "completion_tokens": 939,
+                "prompt_tokens_details": {
+                  "cached_tokens": 1840,
+                  "created_cache_tokens": 3440,
+                  "multimodal_tokens": null
+                },
+                "completion_tokens_details": {
+                  "reasoning_tokens": 0
+                }
+              }
+            },
+            "toolNames": []
+          }
+        ]
+      }
+    ]
+  },
+  "aggregate": {
+    "direct": {
+      "runs": 10,
+      "completed": 10,
+      "correct": 10,
+      "incorrectOrIncomplete": 0,
+      "inputTokens": 831240,
+      "outputTokens": 18899,
+      "totalTokens": 850139,
+      "modelCalls": 30,
+      "apiRetries": 0,
+      "runsWithApiRetries": 0,
+      "toolCalls": 20,
+      "scriptExecutions": 0,
+      "failedScripts": 0,
+      "runsWithFailedScripts": 0,
+      "toolErrors": 0,
+      "averagesPerRun": {
+        "inputTokens": 83124,
+        "outputTokens": 1889.9,
+        "totalTokens": 85013.9,
+        "modelCalls": 3
+      }
+    },
+    "codeMode": {
+      "runs": 10,
+      "completed": 10,
+      "correct": 10,
+      "incorrectOrIncomplete": 0,
+      "inputTokens": 143357,
+      "outputTokens": 9806,
+      "totalTokens": 153163,
+      "modelCalls": 40,
+      "apiRetries": 0,
+      "runsWithApiRetries": 0,
+      "toolCalls": 30,
+      "scriptExecutions": 30,
+      "failedScripts": 0,
+      "runsWithFailedScripts": 0,
+      "toolErrors": 0,
+      "averagesPerRun": {
+        "inputTokens": 14335.7,
+        "outputTokens": 980.6,
+        "totalTokens": 15316.3,
+        "modelCalls": 4
+      }
+    }
+  },
+  "comparison": {
+    "codeModePercentChange": {
+      "inputTokens": -82.75383764015206,
+      "outputTokens": -48.11365680723848,
+      "totalTokens": -81.98376971295282,
+      "modelCalls": 33.33333333333333
+    }
+  }
+}
